@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Suspicious IPs</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            padding: 40px;
+
+            font-family: Arial;
+
+            background: #111827;
+
+            color: white;
+
+        }
+
+        .container {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: #1e293b;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+        }
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+        }
+
+        th,
+        td {
+
+            padding: 15px;
+
+            text-align: left;
+
+            border-bottom: 1px solid #334155;
+
+        }
+
+        th {
+
+            color: #94a3b8;
+
+        }
+
+        a {
+
+            color: #60a5fa;
+
+            text-decoration: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        🚨 Suspicious IP Tracking
+    </h1>
+
+    <p>
+        IP addresses associated with detected alerts.
+    </p>
+
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Source IP
+                </th>
+
+                <th>
+                    Number of Alerts
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+        {% for item in suspicious %}
+
+            <tr>
+
+                <td>
+                    {{ item["source_ip"] }}
+                </td>
+
+                <td>
+                    {{ item["alert_count"] }}
+                </td>
+
+            </tr>
+
+        {% else %}
+
+            <tr>
+
+                <td colspan="2">
+                    No suspicious IPs detected.
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+
+    <br>
+
+    <a href="/">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+
+</html>

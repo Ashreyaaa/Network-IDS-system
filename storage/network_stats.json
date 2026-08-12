@@ -1,0 +1,11 @@
+{
+    "total_packets": 3200,
+    "tcp_packets": 3070,
+    "udp_packets": 118,
+    "ipv4_packets": 231,
+    "ipv6_packets": 2965,
+    "other_packets": 4,
+    "top_source_ip": "2409:40d1:51d:754c:c8b0:c108:435b:1ceb",
+    "top_destination_ip": "2409:40d1:51d:754c:c8b0:c108:435b:1ceb",
+    "top_destination_port": 443
+}

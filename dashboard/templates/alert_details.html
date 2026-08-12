@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Alert Details</title>
+
+<style>
+
+body {
+
+    margin: 0;
+
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background: #0b0f14;
+
+    color: #e5e7eb;
+
+}
+
+
+.container {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.card {
+
+    background: #111827;
+
+    border:
+        1px solid #273244;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+}
+
+
+h1 {
+
+    margin-top: 0;
+
+}
+
+
+.row {
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid #273244;
+
+}
+
+
+.label {
+
+    color: #8b95a7;
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+.value {
+
+    font-size: 17px;
+
+}
+
+
+.back {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 16px;
+
+    background: #334155;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>
+🚨 Alert Details
+</h1>
+
+
+<div class="row">
+
+<span class="label">
+Alert ID
+</span>
+
+<span class="value">
+#{{ alert["id"] }}
+</span>
+
+</div>
+
+
+<div class="row">
+
+<span class="label">
+Time
+</span>
+
+<span class="value">
+{{ alert["timestamp"] }}
+</span>
+
+</div>
+
+
+<div class="row">
+
+<span class="label">
+Attack Type
+</span>
+
+<span class="value">
+{{ alert["alert_type"] }}
+</span>
+
+</div>
+
+
+<div class="row">
+
+<span class="label">
+Source IP
+</span>
+
+<span class="value">
+{{ alert["source_ip"] }}
+</span>
+
+</div>
+
+
+<div class="row">
+
+<span class="label">
+Ports
+</span>
+
+<span class="value">
+{{ alert["ports"] }}
+</span>
+
+</div>
+
+
+<div class="row">
+
+<span class="label">
+Severity
+</span>
+
+<span class="value">
+{{ alert["severity"] }}
+</span>
+
+</div>
+
+
+<a
+href="/"
+class="back"
+>
+← Back to Dashboard
+</a>
+
+
+</div>
+
+</div>
+
+</body>
+
+</html>
